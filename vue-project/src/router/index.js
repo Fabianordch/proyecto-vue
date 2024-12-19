@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/lista-de-tareas',
       name: 'ListaDeTareas',
-      component: () => import('../modules/ListaDeTareas/components/ListaDeTareas.vue'),
+      component: () => import('../modules/listaDeTareas/components/ListaDeTareas.vue'),
     },
     {
       path: '/registrar',
