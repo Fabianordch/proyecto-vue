@@ -1,26 +1,30 @@
-import { createRouter, createWebHistory } from 'vue-router';
-
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: HomeView,
-    // },
-    
+/*     {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
+    */
     {
-       path: '/contador',
-       name: 'contador',
-      component: () => import('../components/Contador.vue'),
+      path: '/contador',
+      name: 'contador',
+      component: () => import('../modules/contador/components/contador.vue'),
     },
     {
       path: '/lista-de-tareas',
-      name: 'ListadeTareas',
-     component: () => import('../components/ListaDeTareas.vue'),
+      name: 'ListaDeTareas',
+      component: () => import('../modules/ListaDeTareas/components/ListaDeTareas.vue'),
+    },
+    {
+      path: '/registrar',
+      name: 'registrar',
+      component: () => import('../modules/registro/views/RegistrarView.vue'),
     }
   ],
-});
+})
 
-export default router;
+export default router
